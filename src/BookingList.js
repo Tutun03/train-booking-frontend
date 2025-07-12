@@ -3,7 +3,7 @@ function BookingList() {
   const [bookings, setBookings] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/api/bookings")
+    fetch("https://train-booking-backend-ajzh.onrender.com/api/bookings")
       .then((res) => res.json())
       .then((data) => setBookings(data))
       .catch((err) => console.error("Error fetching bookings:", err));
