@@ -3,8 +3,7 @@ import { io } from "socket.io-client";
 
 // Connect to your backend's WebSocket server
 const socket = io("https://train-booking-backend-ajzh.onrender.com", {
-  transports: ["polling", "websocket"], // force polling instead of WebSocket
-  path: "/socket.io", 
+  transports: ["websocket"], // force polling instead of WebSocket
 });
 
 function BookingList() {
