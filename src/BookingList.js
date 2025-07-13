@@ -2,7 +2,9 @@ import React, { useEffect, useState } from "react";
 import { io } from "socket.io-client";
 
 // Connect to your backend's WebSocket server
-const socket = io("https://train-booking-backend-ajzh.onrender.com");
+const socket = io("https://train-booking-backend-ajzh.onrender.com", {
+  transports: ["polling"],  // force polling instead of WebSocket
+});
 
 function BookingList() {
   const [bookings, setBookings] = useState([]);
